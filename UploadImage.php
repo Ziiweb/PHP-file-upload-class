@@ -4,6 +4,8 @@ namespace Ziiweb\UploadImage;
 
 require_once 'Upload.php';
 
+use Ziiweb\Upload;
+
 class UploadImage extends Upload {
 
     /**
