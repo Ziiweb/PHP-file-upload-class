@@ -1,6 +1,6 @@
 <?php
 
-namespace Ziiweb\Upload;
+namespace Ziiweb;
 
 /**
  * Simple PHP upload class
@@ -119,7 +119,7 @@ class Upload {
 			throw new Exception('Upload: Can\'t create destination. '.$this->root . $this->destination);
 		}
 		//create finfo object
-		$this->finfo = new finfo();
+		$this->finfo = new \finfo();
 	}
 	/**
 	 * Set target filename
@@ -227,7 +227,6 @@ class Upload {
 	 */
 	public function set_error($message) {
 		$this->validation_errors[] = $message;
-                var_dump($this->validation_errors);
 	}
 	/**
 	 * Return validation errors
@@ -235,7 +234,6 @@ class Upload {
 	 * @return array
 	 */
 	public function get_errors() {
-            var_dump($this->validation_errors);
 		return $this->validation_errors;
 	}
 	/**
