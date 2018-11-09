@@ -1,4 +1,7 @@
 <?php
+
+namespace Ziiweb\Upload;
+
 /**
  * Simple PHP upload class
  *
