@@ -1,10 +1,11 @@
 <?php
 
-namespace Ziiweb\UploadImage;
+namespace Ziiweb;
 
 require_once 'PHP-file-upload-class/Upload.php';
 
 use Ziiweb\Upload;
+
 
 class UploadImage extends Upload {
 
