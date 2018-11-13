@@ -116,7 +116,7 @@ class Upload {
 		}
 		// set & create destination path
 		if (!$this->set_destination($destination)) {
-			throw new Exception('Upload: Can\'t create destination. '.$this->root . $this->destination);
+			throw new \Exception('Upload: Can\'t create destination. '.$this->root . $this->destination);
 		}
 		//create finfo object
 		$this->finfo = new \finfo();
@@ -199,7 +199,7 @@ class Upload {
 		$status = move_uploaded_file($this->tmp_name, $this->file['full_path']);
 		//checks whether upload successful
 		if (!$status) {
-			throw new Exception('Upload: Can\'t upload file.');
+			throw new \Exception('Upload: Can\'t upload file.');
 		}
 		//done
 		$this->file['status']	= true;
@@ -244,10 +244,10 @@ class Upload {
 	 */
 	public function callbacks($instance_of_callback_object, $callback_methods) {
 		if (empty($instance_of_callback_object)) {
-			throw new Exception('Upload: $instance_of_callback_object can\'t be empty.');
+			throw new \Exception('Upload: $instance_of_callback_object can\'t be empty.');
 		}
 		if (!is_array($callback_methods)) {
-			throw new Exception('Upload: $callback_methods data type need to be array.');
+			throw new \Exception('Upload: $callback_methods data type need to be array.');
 		}
 		$this->external_callback_object	 = $instance_of_callback_object;
 		$this->external_callback_methods = $callback_methods;
