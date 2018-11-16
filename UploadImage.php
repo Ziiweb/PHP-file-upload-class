@@ -2,7 +2,7 @@
 
 namespace Ziiweb;
 
-require_once 'PHP-file-upload-class/Upload.php';
+require_once 'Upload.php';
 
 use Ziiweb\Upload;
 
